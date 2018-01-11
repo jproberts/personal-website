@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
 <head>
 	<title> James Roberts </title>
@@ -13,18 +15,41 @@
 		position: absolute;
 		bottom: 5px;
 		left: 10px;
+		padding: 10px;
+	}
+	#Menu {
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		padding: 20px;
+	}
+	#NameTag {
+		width: 500px;
+		height: 200px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
 	}
 	</style>
 </head>
 
 <body>
-	<h1> JAMES<strong>ROBERTS</strong> </h1>
-	<h3> COMPUTER ENGINEERING STUDENT </h3>
+	<div id="NameTag">
+		<h1> JAMES <strong>ROBERTS</strong> </h1>
+		<h3> COMPUTER ENGINEERING STUDENT </h3>
+	</div>
 
 	<a href="https://www.github.com/jproberts/">
 		<img src="GitHub-Mark-Light-64px.png" alt="GitHub" id="GitHub">
 	</a>
-
+	<div id="Menu">
+		{{range .Site.Sections}}
+			<a href="{{ .Permalink }}"> {{.Title}}</a>
+		{{end}}
+	</div>
 </body>
 
 </html>
