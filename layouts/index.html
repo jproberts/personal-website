@@ -2,14 +2,20 @@
 
 <html>
 <head>
-	<title> James Roberts </title>
+	<title> J. Roberts </title>
 	<style> 
 	body {
-		background-color: gray;
-		color: white;
+		background-color: white; /*#f7f5e6; /*#E3F2F9;*/
+		color:  #7142f4; /*#5C6E87*/ /*#2d2d86;*/
 	}
 	h1, h3 {
 		text-align: center;
+		font-family: "Garamond"; <!-- Need to look into custom fonts. Corbert? -->
+	}
+	a {
+		text-decoration: none;
+		color: inherit;
+		font-family: "Garamond";
 	}
 	#GitHub {
 		position: absolute;
@@ -22,24 +28,38 @@
 		bottom: 0px;
 		right: 0px;
 		padding: 20px;
+		font-size: 125%;
 	}
 	#NameTag {
-		width: 500px;
-		height: 200px;
+		width: 3.75in;
+		height: 2in;
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		left: 0;
 		right: 0;
 		margin: auto;
+  -moz-box-shadow:    3px 3px 3px 3px #ccc;
+  -webkit-box-shadow: 3px 3px 3px 3px #ccc;
+  box-shadow:         3px 3px 3px 3px #ccc;
+	}
+
+	h1, h3 {
+  background-color: #7142f4;
+  color: transparent;
+  text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
 	}
 	</style>
 </head>
 
 <body>
 	<div id="NameTag">
-		<h1> JAMES <strong>ROBERTS</strong> </h1>
-		<h3> COMPUTER ENGINEERING STUDENT </h3>
+		<br>
+		<h1>JAMES <strong>ROBERTS</strong> </h1>
+		<h3> COMPUTER ENGINEERING <br> STUDENT </h3>
 	</div>
 
 	<a href="https://www.github.com/jproberts/">
@@ -47,7 +67,7 @@
 	</a>
 	<div id="Menu">
 		{{range .Site.Sections}}
-			<a href="{{ .Permalink }}"> {{.Title}}</a>
+			<a href="{{ .Permalink }}"> {{.Title}}</a> | 
 		{{end}}
 	</div>
 </body>
