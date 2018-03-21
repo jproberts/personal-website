@@ -1,5 +1,5 @@
-**Personal Website**
-***In Development***
+##Personal Website
+*Under Development*
 
 This repository holds all files for my personal website. The site is built
 using Hugo and will be hosted through GitHub Pages. 
