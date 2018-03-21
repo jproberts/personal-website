@@ -10,18 +10,26 @@
 	}
 	h1, h3 {
 		text-align: center;
-		font-family: "Garamond"; <!-- Need to look into custom fonts. Corbert? -->
+		font-family: "Trebuchet MS"; <!-- Need to look into custom fonts. Corbert? -->
 	}
 	a {
 		text-decoration: none;
 		color: inherit;
 		font-family: "Garamond";
 	}
-	#GitHub {
+	#Links {
 		position: absolute;
-		bottom: 5px;
-		left: 10px;
+		bottom: 0px;
+		left: 5px;
 		padding: 10px;
+	}
+	#GitHub {
+		height: 48px;
+		width: 48px;
+	}
+	#LinkedIn {
+		height: 40px;
+		width: 50px;
 	}
 	#Menu {
 		position: absolute;
@@ -29,6 +37,7 @@
 		right: 0px;
 		padding: 20px;
 		font-size: 125%;
+		text-align: right;
 	}
 	#NameTag {
 		width: 3.75in;
@@ -58,16 +67,20 @@
 <body>
 	<div id="NameTag">
 		<br>
-		<h1>JAMES <strong>ROBERTS</strong> </h1>
-		<h3> COMPUTER ENGINEERING <br> STUDENT </h3>
+		<h1>James <strong>Roberts</strong> </h1>
+		<h3> Computer Engineering Student </h3>
 	</div>
-
+	<div id="Links">
 	<a href="https://www.github.com/jproberts/">
-		<img src="GitHub-Mark-Light-64px.png" alt="GitHub" id="GitHub">
+		<img src="GitHub-Mark-64px.png" alt="GitHub" id="GitHub">
 	</a>
+	<a href="https://www.linkedin.com/in/jproberts-10125">
+		<img src="In-Black-59px-TM.png" alt="LinkedIn" id="LinkedIn" hspace=10>
+	</a>
+	</div>
 	<div id="Menu">
 		{{range .Site.Sections}}
-			<a href="{{ .Permalink }}"> {{.Title}}</a> | 
+			| <a href="{{ .Permalink }}"> {{.Title}}</a> |
 		{{end}}
 	</div>
 </body>
