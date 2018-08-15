@@ -3,20 +3,22 @@
 <html>
 <head>
 	<title> J. Roberts </title>
-	<style> 
+	<!-- <style> 
 	body {
 		background-color: white; /*#f7f5e6; /*#E3F2F9;*/
 		color:  #7142f4; /*#5C6E87*/ /*#2d2d86;*/
 	}
 	h1, h3 {
 		text-align: center;
-		font-family: "Trebuchet MS"; <!-- Need to look into custom fonts. Corbert? -->
+		font-family: "Trebuchet MS";
 	}
-	a {
-		text-decoration: none;
-		color: inherit;
-		font-family: "Garamond";
+
+	#Bg {
+		height: 100%;
+		width: 100%;
+		background-color: blue;
 	}
+
 	#Links {
 		position: absolute;
 		bottom: 0px;
@@ -36,38 +38,18 @@
 		bottom: 0px;
 		right: 0px;
 		padding: 20px;
-		font-size: 125%;
+		border: black;
 		text-align: right;
 	}
-	#NameTag {
-		width: 3.75in;
-		height: 2in;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		margin: auto;
-  -moz-box-shadow:    3px 3px 3px 3px #ccc;
-  -webkit-box-shadow: 3px 3px 3px 3px #ccc;
-  box-shadow:         3px 3px 3px 3px #ccc;
-	}
 
-	h1, h3 {
-  background-color: #7142f4;
-  color: transparent;
-  text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
-  -webkit-background-clip: text;
-     -moz-background-clip: text;
-          background-clip: text;
-	}
-	</style>
+	</style> -->
 </head>
 
 <body>
+	<div id="Bg"></div>
 	<div id="NameTag">
 		<br>
-		<h1>James <strong>Roberts</strong> </h1>
+		<h1>James Roberts</h1>
 		<h3> Computer Engineering Student </h3>
 	</div>
 	<div id="Links">
@@ -79,9 +61,7 @@
 	</a>
 	</div>
 	<div id="Menu">
-		{{range .Site.Sections}}
-			| <a href="{{ .Permalink }}"> {{.Title}}</a> |
-		{{end}}
+		<p> Menu placeholder.</p>
 	</div>
 </body>
 
