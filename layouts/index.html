@@ -43,15 +43,76 @@
 	}
 
 	</style> -->
+
+	<style>
+		body {
+			background-color: #222233;
+			color: whitesmoke;
+			font-family: Arial, Helvetica, sans-serif;
+
+		}
+		header {
+			height: 4em;
+			margin: 20px 30px;
+			vertical-align: middle;
+		}
+		nav {
+			height: 3em;
+			margin-top: 0.5em;
+			float: left;
+			background-color: aliceblue;
+			color: black;
+			vertical-align: middle;
+			line-height: 3em;
+			padding: 0em 20px;
+		}
+		#Home {
+			height: 100%;
+			background-color: lightskyblue;
+			float: left;
+			padding: 0em 25px;
+			line-height: 2em;
+			text-align: center;
+		}
+		a {
+			padding: 0em 30px;
+		}
+		#Page {
+			clear: both;
+			/*margin-left: 50px;*/
+			margin: 20px auto;
+			max-width: 50em;
+			background-color: white;
+			color: black;
+			padding: 30px 100px;
+		}
+	</style>
 </head>
 
 <body>
-	<div id="Bg"></div>
+	<header>
+		<div id="Home">
+			<h2> J. ROBERTS </h2>
+		</div>
+		<nav>
+			<a> about </a>
+			<a> writing </a>
+			<a> coding </a>
+			<a> contact </a> 
+		</nav>
+	</header>
+
+	<div id="Page">
+		{{ .Content }}
+	
+	<!--
 	<div id="NameTag">
 		<br>
 		<h1>James Roberts</h1>
-		<h3> Computer Engineering Student </h3>
+		<h3> Current Computer Engineering Student </h3>
+		<h3> Aspiring Systems Architect </h3>
 	</div>
+-->
 	<div id="Links">
 	<a href="https://www.github.com/jproberts/">
 		<img src="GitHub-Mark-64px.png" alt="GitHub" id="GitHub">
@@ -60,8 +121,6 @@
 		<img src="In-Black-59px-TM.png" alt="LinkedIn" id="LinkedIn" hspace=10>
 	</a>
 	</div>
-	<div id="Menu">
-		<p> Menu placeholder.</p>
 	</div>
 </body>
 
