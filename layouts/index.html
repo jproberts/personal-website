@@ -62,9 +62,7 @@
 			margin-top: 0.5em;
 			float: left;
 			background-color: aliceblue;
-			color: gray;
 			vertical-align: middle;
-			line-height: 3em;
 			padding: 0em 20px;
 		}
 		#Home {
@@ -75,12 +73,16 @@
 			line-height: 2em;
 			text-align: center;
 		}
-		nav a {
+		nav ul li {
+			display: inline;
+		}
+		nav ul li a {
 			margin: 0px 15px;
 			padding: 0.25em 1em;
 			text-decoration: none;
+			color: dimgray;
 		}
-		nav a:hover, nav a:active {
+		nav ul li a:hover, nav a:active {
 			color: black;
 			border-bottom: 5px solid black;
 			transition: 0.3s ease;
@@ -109,10 +111,20 @@
 			<h2> J. ROBERTS </h2>
 		</div>
 		<nav>
+			<ul>
+			{{ $currentPage := . }}
+			{{ range .Site.Menus.main }}
+				<li>
+					<a href="{{ .URL }}"> {{ .Name }} </a>
+				</li>
+			{{ end }}
+			<!---
 			<a> about </a>
 			<a> writing </a>
 			<a> coding </a>
 			<a> contact </a> 
+			-->
+			</ul>
 		</nav>
 	</header>
 
