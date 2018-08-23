@@ -2,70 +2,12 @@
 
 <html>
 <head>
-	<title> J. Roberts </title>
-	<style>
-		body {
-			background-color: #222233;
-			color: whitesmoke;
-			font-family: Arial, Helvetica, sans-serif;
-
-		}
-		header {
-			height: 4em;
-			margin: 30px 10px 20px 30px;
-			vertical-align: middle;
-			overflow: hidden;
-		}
-		nav {
-			height: 3em;
-			margin-top: 0.5em;
-			float: left;
-			background-color: aliceblue;
-			vertical-align: middle;
-			padding: 0em 20px;
-		}
-		#Home {
-			height: 100%;
-			background-color: lightskyblue;
-			float: left;
-			padding: 0em 25px;
-			line-height: 2em;
-			text-align: center;
-		}
-		#Home a {
-			color: white;
-			text-decoration: none;
-		}
-		nav ul li {
-			display: inline;
-		}
-		nav ul li a {
-			margin: 0px 15px;
-			padding: 0.25em 1em;
-			text-decoration: none;
-			color: dimgray;
-		}
-		nav ul li a:hover, nav a:active {
-			color: black;
-			border-bottom: 5px solid black;
-			transition: 0.3s ease;
-			text-decoration: none;
-		}
-		#Page {
-			clear: both;
-			margin: 50px auto;
-			max-width: 50em;
-			background-color: white;
-			color: black;
-			padding: 40px 100px;
-		}
-		@media screen and (max-width: 400px) {
-		#Page {
-			margin: 4px auto;
-			padding: 10px 15px;
-		}
-		}
-	</style>
+    {{ block "title" . }}
+    <title> J. Roberts </title>
+    {{ end }}
+    {{ block "styles" .}}
+    <link rel="stylesheet" href="/css/main.css">
+    {{ end }}
 </head>
 
 <body>
@@ -80,7 +22,7 @@
 			{{ $currentPage := . }}
 			{{ range .Site.Menus.main }}
 				<li>
-					<a href="{{ .URL }}"> {{ .Name }} </a>
+                    <a href="{{ .URL }}"{{ if eq .URL $currentPage.URL }} class="active"{{end}}> {{ .Name }} </a>
 				</li>
 			{{ end }}
 			</ul>
