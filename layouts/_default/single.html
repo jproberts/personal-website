@@ -4,6 +4,8 @@
 
 {{ define "main" }}
     <div id="Page">
+        <h1> {{ humanize .Title }} </h1>
+        <hr>
         {{ .Content }}
     </div>
 {{ end }}

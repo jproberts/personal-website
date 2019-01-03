@@ -11,8 +11,9 @@ I am not, however, interested in web development.
 So why create this website?
 
  * to show people who I am beyond my resume. Somewhere they can [learn more about me](/about)
- that I might not include on [my LinkedIn](https://www.linkedin.com/in/jproberts1012/).
- * to be able to publish [my writings](/writings) in a form that I could control.
+ that I might not include on [my LinkedIn](https://www.linkedin.com/in/jproberts1012/) or
+ [my resume](/JamesRobertsResume.pdf).
+ * to be able to publish [my writings](/writings) in a form that I can control.
  * to showcase [my coding](/coding) projects beyond the uniform interface of
 [my Github repositories](https://github.com/jproberts).
 
